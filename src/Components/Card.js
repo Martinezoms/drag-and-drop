@@ -147,18 +147,18 @@ function Card({ tasks, status, title, data, index, saveNewData, draggedItem, set
             onDragEnter={dragEnterHandler}
             onDragLeave={dragLeaveHandler}
           >
-            {tasks.map((task, i) => (
+            {tasks.map((task) => (
               <li
                 id={task.id}
                 key={task.id}
-                className="border-2 border-solid py-3 px-2 m-2 cursor-pointer hover:border-black/30"
+                className="border-2 border-solid py-3 px-2 m-2 cursor-pointer hover:border-black/30 flex items-center justify-center max-w-full break-normal"
                 draggable
                 onDragStart={dragTask}
               >
                 {task.title}
                 <FontAwesomeIcon
                   icon="times"
-                  className="float-right pt-1 text-black/40 hover:text-black"
+                  className="float-right pt-1 text-black/40 hover:text-black m-2"
                   onClick={() => deleteTaskHandler(task.id)}
                 />
               </li>
