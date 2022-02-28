@@ -130,7 +130,7 @@ function Card({ tasks, status, title, data, index, saveNewData, draggedItem, set
 
   return (
     <div>
-      <div className="bg-white rounded-lg m-5 shadow-2xl w-96 select-none">
+      <div className="bg-white rounded-lg m-5 shadow-2xl w-80 select-none">
         <div className="text-center text-white p-2 rounded-t-lg" style={{ background: color }}>
           <h1>{title}</h1>
         </div>
@@ -166,7 +166,7 @@ function Card({ tasks, status, title, data, index, saveNewData, draggedItem, set
           </ul>
         ) : (
           <div
-            className="flex justify-center items-center h-[250px] text-black/20 text-5xl"
+            className="flex justify-center items-center h-[100px] text-black/20 text-4xl"
             ref={emptyDivRef}
             id={index}
             onDragOver={allowDrop}
@@ -177,27 +177,30 @@ function Card({ tasks, status, title, data, index, saveNewData, draggedItem, set
             Add task
           </div>
         )}
-        <div className="px-3 mt-3 flex justify-between">
-          <button
-            className="rounded-lg py-2 px-4 mb-4 text-white shadow-sm hover:brightness-125 hover:shadow-md "
-            style={{ background: color }}
-            onClick={setShowTextarea}
-          >
-            + Add
-          </button>
+        <div className=" overflow-hidden ">
           {showTextarea && (
+            <textarea className="w-full bg-smoke outline-none p-2 rounded-b-lg h-20 z-20" ref={inputRef}></textarea>
+          )}
+
+          <div className="px-3 mt-3 flex justify-between">
             <button
               className="rounded-lg py-2 px-4 mb-4 text-white shadow-sm hover:brightness-125 hover:shadow-md "
               style={{ background: color }}
-              onClick={createTaskHandler}
+              onClick={setShowTextarea}
             >
-              Save
+              + Add
             </button>
-          )}
+            {showTextarea && (
+              <button
+                className="rounded-lg py-2 px-4 mb-4 text-white shadow-sm hover:brightness-125 hover:shadow-md "
+                style={{ background: color }}
+                onClick={createTaskHandler}
+              >
+                Save
+              </button>
+            )}
+          </div>
         </div>
-        {showTextarea && (
-          <textarea className="w-full bg-smoke outline-none p-2 rounded-b-lg h-40" ref={inputRef}></textarea>
-        )}
       </div>
     </div>
   );

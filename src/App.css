@@ -1,6 +1,6 @@
 .custom-scroll {
   overflow-y: auto;
-  height: 250px;
+  height: 200px;
 }
 
 .custom-scroll::-webkit-scrollbar-track {
@@ -21,6 +21,6 @@
 }
 
 .over {
-  height: 300px;
+  height: 210px;
   transition: all 0.3s ease-in-out;
 }
