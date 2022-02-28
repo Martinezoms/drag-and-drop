@@ -151,7 +151,7 @@ function Card({ tasks, status, title, data, index, saveNewData, draggedItem, set
               <li
                 id={task.id}
                 key={task.id}
-                className="border-2 border-solid py-3 px-2 m-2 cursor-pointer hover:border-black/30 flex items-center justify-center max-w-full break-normal"
+                className="border-2 border-solid py-3 px-2 m-2 cursor-pointer hover:border-black/30 flex items-center justify-between max-w-full break-normal"
                 draggable
                 onDragStart={dragTask}
               >
