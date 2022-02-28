@@ -137,7 +137,7 @@ function Card({ tasks, status, title, data, index, saveNewData, draggedItem, set
 
         {tasks.length > 0 ? (
           <ul
-            className="custom-scroll text-xl "
+            className="custom-scroll text-xl"
             id={index}
             title={title}
             ref={progressRef}
@@ -158,7 +158,7 @@ function Card({ tasks, status, title, data, index, saveNewData, draggedItem, set
                 {task.title}
                 <FontAwesomeIcon
                   icon="times"
-                  className=" float-right pt-1 text-black/40 hover:text-black"
+                  className="float-right pt-1 text-black/40 hover:text-black"
                   onClick={() => deleteTaskHandler(task.id)}
                 />
               </li>
@@ -179,12 +179,12 @@ function Card({ tasks, status, title, data, index, saveNewData, draggedItem, set
         )}
         <div className=" overflow-hidden ">
           {showTextarea && (
-            <textarea className="w-full bg-smoke outline-none p-2 rounded-b-lg h-20 z-20" ref={inputRef}></textarea>
+            <textarea className="w-full bg-smoke outline-none p-2 rounded-b-lg h-20" ref={inputRef}></textarea>
           )}
 
           <div className="px-3 mt-3 flex justify-between">
             <button
-              className="rounded-lg py-2 px-4 mb-4 text-white shadow-sm hover:brightness-125 hover:shadow-md "
+              className="rounded-lg py-2 px-4 mb-4 text-white shadow-sm hover:brightness-125 hover:shadow-md"
               style={{ background: color }}
               onClick={setShowTextarea}
             >
@@ -192,7 +192,7 @@ function Card({ tasks, status, title, data, index, saveNewData, draggedItem, set
             </button>
             {showTextarea && (
               <button
-                className="rounded-lg py-2 px-4 mb-4 text-white shadow-sm hover:brightness-125 hover:shadow-md "
+                className="rounded-lg py-2 px-4 mb-4 text-white shadow-sm hover:brightness-125 hover:shadow-md"
                 style={{ background: color }}
                 onClick={createTaskHandler}
               >
